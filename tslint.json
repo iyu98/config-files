@@ -1,0 +1,83 @@
+{
+  "defaultSeverity": "warning",
+  "extends": [
+    "tslint:recommended"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**",
+      "src/**/*.json"
+    ]
+  },
+  "rules": {
+    "no-var-require": false,
+    "global-require": 0,
+    "indent": [
+      true,
+      "spaces",
+      2
+    ], // 缩进
+    "interface-name": false,
+    "no-consecutive-blank-lines": false,
+    "object-literal-sort-keys": false,
+    "ordered-imports": false,
+    "quotemark": [
+      true,
+      "single"
+    ],
+    "member-ordering": [ // 设置修饰符顺序
+      true,
+      {
+        "order": [
+          "public-static-field",
+          "public-static-method",
+          "protected-static-field",
+          "protected-static-method",
+          "private-static-field",
+          "private-static-method",
+          "public-instance-field",
+          "protected-instance-field",
+          "private-instance-field",
+          "public-constructor",
+          "protected-constructor",
+          "private-constructor",
+          "public-instance-method",
+          "protected-instance-method",
+          "private-instance-method"
+        ]
+      }
+    ],
+    "semicolon": [
+      false,
+      "always"
+    ],
+    "no-empty-interface": true, // 不允许空接口
+    "no-parameter-reassignment": true, // 不允许修改方法输入参数
+    "prefer-for-of": true, // 如果for循环中没有使用索引，建议是使用for-of
+    "await-promise": true, // 不允许没有Promise的情况下使用await
+    "curly": true, // if/for/do/while强制使用大括号
+    "forin": true, // 使用for in语句时，强制进行hasOwnProperty检查
+    "no-arg": true, // 不允许使用arguments.callee
+    "no-conditional-assignment": true, // do while/for/if/while 语句中将会对例如if(a=b)进行检查
+    "no-console": false, // 不允许使用console对象
+    "no-empty": false, // 函数体不允许空
+    "no-for-in-array": true, // 不允许对Array使用for-in
+    "no-invalid-template-strings": true, // 只允许在模板字符串中使用${
+    "no-null-keyword": true, // 不允许使用null,使用undefined代替null，指代空指针对象
+    "no-switch-case-fall-through": true, // 不允许case段落中在没有使用breack的情况下，在新启一段case逻辑
+    "no-use-before-declare": true, // 在使用前必须声明
+    "no-var-keyword": true, // 不允许使用var
+    "space-before-function-paren": [
+      true,
+      "never"
+    ],
+    // "no-default-export": true, // 禁止使用export default关键字，因为当export对象名称发生变化时，需要修改import中的对象名。https://github.com/palantir/tslint/issues/1182#issue-151780453
+    "no-duplicate-imports": true, // 禁止在一个文件内，多次引用同一module
+    // 格式
+    "array-type": [
+      true,
+      "array"
+    ], // 建议使用T[]方式声明一个数组对象
+    "no-unnecessary-initializer": true // 不允许没有必要的初始化
+  }
+}
